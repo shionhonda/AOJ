@@ -2,7 +2,7 @@
 #include<string>
 using namespace std;
 
-int S[3];
+int S[200];
 int top = 0;
 
 void push(int x) {
@@ -24,8 +24,8 @@ int main() {
       b = pop();
       push(a+b);
     } else if (c=="-") {
-      a = pop();
       b = pop();
+      a = pop();
       push(a-b);
     } else if (c=="*") {
       a = pop();
