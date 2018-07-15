@@ -1,20 +1,27 @@
 #include<iostream>
 using namespace std;
 
-// Linear search with sentinel
+// Binary search
 int search(int A[], int n, int key) {
-  A[n] = key;
-  int i = 0;
-  while(A[i]!=key) {
-    i++;
+  int start = 0;
+  int end = n;
+  while (start<end) {
+    int mid = (start+end)/2; // Floor
+    if (key == A[mid]) {
+      return 1;
+    } else if (key < A[mid]) {
+      end = mid;
+    } else {
+      start = mid+1;
+    }
   }
-  return i!=n;
+  return 0;
 }
 
 int main() {
   int n, q, key, sum = 0;
   cin >> n;
-  int S[n+1];
+  int S[n];
   for (int i=0; i<n; i++) {
     cin >> S[i];
   }
