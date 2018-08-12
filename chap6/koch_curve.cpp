@@ -11,11 +11,11 @@ void koch(int n, Point a, Point b) {
     return;
   }
   Point s, u, t;
-  double theta = M_PI*2/3;
-  s.x = a.x*2/3 + b.x*1/3;
-  s.y = a.y*2/3 + b.y*1/3;
-  t.x = a.x*1/3 + b.x*2/3;
-  t.y = a.y*1/3 + b.y*2/3;
+  double theta = M_PI*2.0/3.0;
+  s.x = a.x*2.0/3.0 + b.x*1.0/3.0;
+  s.y = a.y*2.0/3.0 + b.y*1.0/3.0;
+  t.x = a.x*1.0/3.0 + b.x*2.0/3.0;
+  t.y = a.y*1.0/3.0 + b.y*2.0/3.0;
   u.x = cos(theta)*(b.x-t.x) - sin(theta)*(b.y-t.y) + t.x;
   u.y = sin(theta)*(b.x-t.x) + cos(theta)*(b.y-t.y) + t.y;
 
@@ -32,10 +32,10 @@ int main() {
   int n;
   Point a, b;
   cin >> n;
-  a.x = 0;
-  a.y = 0;
-  b.x = 100;
-  b.y = 0;
+  a.x = 0.0;
+  a.y = 0.0;
+  b.x = 100.0;
+  b.y = 0.0;
 
   cout << a.x << " " << a.y << endl;
   koch(n, a, b);
